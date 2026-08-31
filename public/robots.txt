@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://filesmanager.bfpcproject.com/sitemap-index.xml
