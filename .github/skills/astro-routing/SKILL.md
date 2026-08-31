@@ -6,6 +6,7 @@ description: "Use when creating Astro routes, file-based navigation, dynamic pag
 # Astro Routing
 
 ## File-based routing
+
 Astro uses the structure of `src/pages/` to generate routes. Each page file becomes a route automatically.
 
 ```astro
@@ -15,6 +16,7 @@ Astro uses the structure of `src/pages/` to generate routes. Each page file beco
 ```
 
 ## Dynamic routes
+
 Use `getStaticPaths()` for slug-based content.
 
 ```astro
@@ -33,29 +35,32 @@ const { slug } = Astro.params;
 ```
 
 ## Redirect configuration
+
 Redirects are configured in `astro.config.mjs`.
 
 ```js
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 
 export default defineConfig({
   redirects: {
-    '/old': '/new',
-    '/blog/[...slug]': '/articles/[...slug]',
-    '/about': 'https://example.com/about',
-    '/news': {
+    "/old": "/new",
+    "/blog/[...slug]": "/articles/[...slug]",
+    "/about": "https://example.com/about",
+    "/news": {
       status: 302,
-      destination: 'https://example.com/news',
+      destination: "https://example.com/news",
     },
   },
 });
 ```
 
 ## Navigation guidance
+
 - Use standard HTML anchors for page navigation.
 - Prefer meaningful href values and current page labeling.
 - Ensure nav items are keyboard accessible.
 - For active states, use `aria-current="page"` when appropriate.
 
 ## When to use this skill
+
 Use this skill when creating pages, route directories, links between pages, static/dynamic routes, or redirect rules in Astro.

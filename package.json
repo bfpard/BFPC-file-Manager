@@ -9,7 +9,9 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",
@@ -17,5 +19,12 @@
   },
   "allowScripts": {
     "esbuild": true
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "prettier": "^3.9.6",
+    "prettier-plugin-astro": "^0.14.1",
+    "prettier-plugin-tailwindcss": "^0.8.1",
+    "tailwindcss": "^4.3.3"
   }
 }
