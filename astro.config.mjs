@@ -8,5 +8,6 @@ export default defineConfig({
   integrations: [sitemap()],
   vite: {
     plugins: [tailwindcss()],
-  },
-});
+  },  devToolbar: {
+    enabled: false,
+  },});
